@@ -1,3 +1,6 @@
+import luis.Dueño;
+import luis.Mascota;
+
 import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -11,15 +14,27 @@ public class Main {
     /* Inicio del programa */
     public static void main(String[] args) {
 
-        // Descomentar una vez que se haya creado la clase Dueño
-        // Dueño dueñoRegistrado = null;
+
+        Dueño dueñoRegistrado = null;
 
         int opcion;
         do {
             opcion = imprimirMenu();
             switch(opcion) {
                 case 1:
+                    dueñoRegistrado = Dueño.leerDatos();
+                    break;
                 case 2:
+                    if(dueñoRegistrado == null) {
+                        logger.log(Level.SEVERE, "Se trató de añadir una mascota sin tener dueño");
+                        System.out.println("Primer necesitas capturar los datos del dueño");
+                    } else {
+                        // Imprimir los datos del dueño
+                        System.out.println(dueñoRegistrado);
+                        // Leer los datos de la mascota y agregarlos a la lista de mascotas del dueño
+                        Mascota mascotaLeida = Mascota.leerDatos();
+                        dueñoRegistrado.listaMascotas.add(mascotaLeida);
+                    }
                 case 3:
                 case 4:
                 default:
