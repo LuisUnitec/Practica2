@@ -28,4 +28,9 @@ public class Mascota {
         return m;
 
     }
+
+    @Override
+    public String toString(){
+        return "{ \"Nombre\":\"" + nombre + "\", }";
+    }   
 }
