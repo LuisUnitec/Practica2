@@ -1,5 +1,4 @@
-import luis.Dueño;
-import luis.Mascota;
+package luis;
 
 import java.util.Scanner;
 import java.util.logging.FileHandler;
@@ -42,6 +41,7 @@ public class Main {
                     System.out.println("Opción incorrecta");
             }
         } while (opcion != 4);
+
     }
 
     /* Menú de opciones para el usuario */

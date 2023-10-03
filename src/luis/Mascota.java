@@ -26,6 +26,11 @@ public class Mascota {
         m.citasPendientes = new ArrayList<>();
 
         return m;
+    }
 
+    public String toString() {
+        return "{ \" Nombre \":\"" + nombre + "\", }";
     }
 }
+
+
