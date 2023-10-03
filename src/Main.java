@@ -1,5 +1,5 @@
-import luis.Dueño;
-import luis.Mascota;
+import Samuel.Dueño;
+import Samuel.Mascota;
 
 import java.util.Scanner;
 import java.util.logging.FileHandler;
@@ -35,8 +35,9 @@ public class Main {
                         Mascota mascotaLeida = Mascota.leerDatos();
                         dueñoRegistrado.listaMascotas.add(mascotaLeida);
                     }
-                case 3:
-                case 4:
+                    break;
+                case 3: break;
+                case 4: break;
                 default:
                     logger.log(Level.INFO, "Usuario seleccionó opción incorrecta: " + opcion);
                     System.out.println("Opción incorrecta");
