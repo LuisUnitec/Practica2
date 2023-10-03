@@ -1,4 +1,4 @@
-package luis;
+package Samuel;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -26,6 +26,9 @@ public class Mascota {
         m.citasPendientes = new ArrayList<>();
 
         return m;
-
+    }
+    @Override
+    public String toString(){
+         return "{\"Nombre\":\"" + nombre + "\",}";
     }
 }
