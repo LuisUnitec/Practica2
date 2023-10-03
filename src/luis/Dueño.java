@@ -1,5 +1,8 @@
 package luis;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -30,6 +33,13 @@ public class Dueño {
 
     @Override
     public String toString() {
-        return nombre + " Tel: ####" + telefono.substring(3) + " Mascotas: " + listaMascotas;
+        //return nombre + " Tel: ####" + telefono.substring(3) + " Mascotas: " + listaMascotas;
+
+        GsonBuilder builder = new GsonBuilder();
+        builder.setPrettyPrinting(); //Da formato a la salida
+
+        Gson g = builder.create();
+
+        return g.toJson(this);
     }
 }
