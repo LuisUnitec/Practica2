@@ -1,3 +1,4 @@
+import luis.Cita;
 import luis.Dueño;
 import luis.Mascota;
 
@@ -36,6 +37,7 @@ public class Main {
                         dueñoRegistrado.listaMascotas.add(mascotaLeida);
                     }
                 case 3:
+                    Cita citaMascota = Cita.leerDatos();
                 case 4:
                 default:
                     logger.log(Level.INFO, "Usuario seleccionó opción incorrecta: " + opcion);
