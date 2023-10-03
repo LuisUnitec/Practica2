@@ -1,6 +1,8 @@
+import luis.Cita;
 import luis.Dueño;
 import luis.Mascota;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -36,6 +38,7 @@ public class Main {
                         dueñoRegistrado.listaMascotas.add(mascotaLeida);
                     }
                 case 3:
+
                 case 4:
                 default:
                     logger.log(Level.INFO, "Usuario seleccionó opción incorrecta: " + opcion);
