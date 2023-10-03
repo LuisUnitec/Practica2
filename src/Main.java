@@ -36,8 +36,10 @@ public class Main {
                         Mascota mascotaLeida = Mascota.leerDatos();
                         dueñoRegistrado.listaMascotas.add(mascotaLeida);
                     }
+                    break;
                 case 3:
                     Cita citaMascota = Cita.leerDatos();
+                    break;
                 case 4:
                 default:
                     logger.log(Level.INFO, "Usuario seleccionó opción incorrecta: " + opcion);
