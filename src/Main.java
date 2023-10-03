@@ -1,3 +1,4 @@
+import luis.Cita;
 import luis.Dueño;
 import luis.Mascota;
 
@@ -16,6 +17,7 @@ public class Main {
 
 
         Dueño dueñoRegistrado = null;
+        Mascota mascotaRegistrada = null;
 
         int opcion;
         do {
@@ -36,6 +38,9 @@ public class Main {
                         dueñoRegistrado.listaMascotas.add(mascotaLeida);
                     }
                 case 3:
+                    System.out.println(mascotaRegistrada);
+                    Cita citaLeida = Cita.leerDatos();
+                    mascotaRegistrada.citasPendientes.add(citaLeida);
                 case 4:
                 default:
                     logger.log(Level.INFO, "Usuario seleccionó opción incorrecta: " + opcion);
@@ -52,7 +57,7 @@ public class Main {
         System.out.println("Elija una opción:");
         System.out.println("1.- Registrar nuevo dueño");
         System.out.println("2.- Registrar mascota");
-        System.out.println("3.- Registrar registrar cita");
+        System.out.println("3.- Registrar cita");
         System.out.println("4.- Salir");
 
         return s.nextInt();
