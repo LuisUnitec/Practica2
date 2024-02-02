@@ -7,6 +7,7 @@ import java.util.logging.SimpleFormatter;
 public class Main {
 
     private static Logger logger = configurarLogs();
+    private static Dueño DueñoRegistrado;
 
     /* Inicio del programa */
     public static void main(String[] args) {
@@ -19,7 +20,12 @@ public class Main {
             opcion = imprimirMenu();
             switch(opcion) {
                 case 1:
+                    DueñoRegistrado = new Dueño();
+                    DueñoRegistrado.leerDatos();
+                    break;// Instancia la clase dueño
                 case 2:
+                    System.out.println("El dueño de la mascota es:");
+                    System.out.println(DueñoRegistrado);
                 case 3:
                 case 4:
                 default:
