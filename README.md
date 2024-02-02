@@ -1,4 +1,4 @@
-## Práctica # 2: Formato json.
+## Práctica # 2: Custom logs (registros de aplicación).
 
 El proyecto consiste en crear un registro de mascotas para la veterinaria
 **"El Borrego Viudo"**.
