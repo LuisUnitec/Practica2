@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -12,19 +13,30 @@ public class Main {
     public static void main(String[] args) {
 
         // Descomentar una vez que se haya creado la clase Dueño
-        // Dueño dueñoRegistrado = null;
+         Dueño dueñoRegistrado = null;
 
         int opcion;
         do {
             opcion = imprimirMenu();
             switch(opcion) {
                 case 1:
+                    dueñoRegistrado = new Dueño(); // Instanciando la clase dueño
+                    dueñoRegistrado.leerDatos(); break;
                 case 2:
+                    //Registrar mascota
+                    System.out.print("El dueño de la mascota es: ");
+                    System.out.println(dueñoRegistrado);
+                    Gato gato = new Gato();
+                    System.out.print("El d: ");
+                    gato.leerDatos();
+                    System.out.print(gato);
                 case 3:
+
+
                 case 4:
                 default:
                     logger.log(Level.INFO, "Usuario seleccionó opción incorrecta: " + opcion);
-                    System.out.println("Opción incorrecta");
+                    System.out.println("Opción incorrecta, elija alguna de las opciones del menu");
             }
         } while (opcion != 4);
     }
