@@ -19,7 +19,12 @@ public class Main {
             opcion = imprimirMenu();
             switch(opcion) {
                 case 1:
+                    dueñoRegistrado = new Dueño();
+                    dueñoRegistrado.leerDatos();
+                    break;
                 case 2:
+                    System.out.println("Usuario selecciono opcion incorrecta:" + opcion);
+                    System.out.println(dueñoRegistrado);
                 case 3:
                 case 4:
                 default:
