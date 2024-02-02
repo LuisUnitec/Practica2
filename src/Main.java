@@ -12,14 +12,25 @@ public class Main {
     public static void main(String[] args) {
 
         // Descomentar una vez que se haya creado la clase Dueño
-        // Dueño dueñoRegistrado = null;
+        Dueño dueñoRegistrado = null;
+        Gato gato = null;
 
         int opcion;
         do {
             opcion = imprimirMenu();
             switch(opcion) {
                 case 1:
+                    //Registrar dueño
+                    dueñoRegistrado = new Dueño(); // instanciando o creando un nuevo dueño
+                    dueñoRegistrado.leerDatos();
+                    break;
                 case 2:
+                    // Registrar mascota
+                    System.out.println("El dueño de la mascota es: ");
+                    System.out.println(dueñoRegistrado);
+                    gato = new Gato();
+                    gato.leerDatos();
+                    break;
                 case 3:
                 case 4:
                 default:
