@@ -27,7 +27,7 @@ public class Main {
 
                     System.out.println("El dueño de la mascota es: ");
                     System.out.println(dueñoRegistrado);
-                    Ga
+
 
 
                 case 3:
