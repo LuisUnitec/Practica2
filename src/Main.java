@@ -12,19 +12,30 @@ public class Main {
     public static void main(String[] args) {
 
         // Descomentar una vez que se haya creado la clase Dueño
-        // Dueño dueñoRegistrado = null;
+         Dueños dueñoRegistrado = null;
 
         int opcion;
         do {
             opcion = imprimirMenu();
             switch(opcion) {
                 case 1:
+                    dueñoRegistrado = new Dueños(); //insertar la calse dueños
+                    dueñoRegistrado.leerDatos();
+                    break;
                 case 2:
+                    System.out.println("El dueño de la mascota es;");
+                    System.out.println(dueñoRegistrado);
+
+                    Gato gato = new Gato();
+                    gato.leerDatos();
+                    System.out.println("El gato es; ");
+                    System.out.println(gato);
+                    break;
                 case 3:
                 case 4:
                 default:
                     logger.log(Level.INFO, "Usuario seleccionó opción incorrecta: " + opcion);
-                    System.out.println("Opción incorrecta");
+                    System.out.println("Opción incorrecta, elija alguna de las opciones del menú");
             }
         } while (opcion != 4);
     }
